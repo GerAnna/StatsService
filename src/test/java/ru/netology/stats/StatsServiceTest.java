@@ -55,7 +55,28 @@ import static org.junit.jupiter.api.Assertions.*;
 }
 
     //тест на метод № 5
+    @Test
+    void shouldcountMonthsOverMean(){
+        StatsService service = new StatsService();
+        int[] monthsSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
+
+        int actual = service.monthsOverMean(monthsSales);
+
+        assertEquals(expected, actual);
+    }
+
 
     //тест на метод № 6
+    @Test
+    void shouldcountMonthsBelowMean(){
+        StatsService service = new StatsService();
+        int[] monthsSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
+
+        int actual = service.monthsOverMean(monthsSales);
+
+        assertEquals(expected, actual);
+    }
 
 }

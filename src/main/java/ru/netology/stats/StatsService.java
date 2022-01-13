@@ -43,6 +43,26 @@ public class StatsService {
     }
 
     //метод № 5
+    public int monthsOverMean(int[] sales){
+        int monthOverMean = 0;
+        for (int sale : sales){
+            if (calcMean(sales)> sale){
+                monthOverMean++;
+            }
+        }
+        return monthOverMean;
+    }
 
     //метод № 6
+    public int monthsBelowMean(int[] sales){
+        int monthBelowMean = 0;
+        for (int sale : sales){
+            if (calcMean(sales)< sale){
+                monthBelowMean++;
+            }
+        }
+        return monthBelowMean;
+    }
+
+
 }
